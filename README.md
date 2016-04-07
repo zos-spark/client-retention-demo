@@ -21,13 +21,13 @@ The project
 The client retention demo requires the following:
 
 * Docker Toolbox
-* [z/OS Host]() (z/System)
+* [z/OS Host](https://github.com/zos-spark/client-retention-demo/tree/master/data/zos) (z/System)
  * [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) with APAR
  * VSAM
  * DB2
-* [Interactive-Insights-Workbench (I2W)]() (Docker)
-* [MongoDB]() (Docker)
-* [Scala-Workbench]() (Docker)
+* [Interactive-Insights-Workbench (I2W)](https://github.com/zos-spark/client-retention-demo#setup-interactive-insights-workbench-i2w-environment) (Docker)
+* [MongoDB](https://github.com/zos-spark/client-retention-demo#setup-mongodb) (Docker)
+* [Scala-Workbench](https://github.com/zos-spark/client-retention-demo#setup-scala-workbench-environment) (Docker)
 
 ## Setup
 
