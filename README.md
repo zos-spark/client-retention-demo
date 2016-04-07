@@ -1,9 +1,25 @@
 #Client Retention Demo
 
 ## Purpose
-This project serves as an end-to end demonstration and integration verification test (IVT) for Spark on z/OS [reference architecture](https://ibm.box.com/shared/static/xm05xl372hkbmmj4eu9fhoq0kplytzp3.png).
+This project serves as an end-to-end demonstration and integration verification test (IVT) for the Spark on z/OS [reference architecture](https://ibm.box.com/shared/static/xm05xl372hkbmmj4eu9fhoq0kplytzp3.png).
 
-The project 
+The project uses imitation financial data for a retail bank scenario. The retail bank is assumed to have two data sources for their system of records:
+
+* Client Profile Data (VSAM)
+* Client Transaction History (DB2)
+
+The bank would use the Scala Workbench to distill these data sources into a desired dateset for use by data explorers who would use the Interactive Insights Workbench to perform downstream analytics.
+
+## Overview
+
+To perform an IVT of a Spark on z/OS deployment one would do teh following:
+
+1. Install and configure the [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) with APAR
+2. Prime the z/OS data sources with sample demo data.
+3. Install the Scala Workbench
+4. Install the Interactive Insights Workbench (I2W) and MongoDB
+5. Run a Scala Notebook to prime the MongoDB
+6. Run a I2W Notebook to visualize downstream analytics.
 
 ## Contents
 
@@ -15,7 +31,6 @@ The project
 	* Sample Scala Notebook that performs data munging on DB2 and VSAM data and writes results to MongoDB.
 	* Sample Python Notebooks that analyzes data in MongoDB.
 	* Sample Python Notebook that uses [Dato](https://dato.com) to provide a churn analysis on the data in MongoDB.
-
 
 ## Dependencies
 The client retention demo requires the following:
@@ -29,20 +44,18 @@ The client retention demo requires the following:
 * MongoDB (Docker)
 * Scala-Workbench (Docker)
 
-## Setup
+## Demo Setup
 
-### Setup VSAM and DB2 on z/OS
-Go into the ```data/zos/``` directory and follow the README in that directory.
+### z/OS Data
+Prepare VSAM and DB2 data sources with sample demo data. Go into the ```data/zos/``` directory and follow the README in that directory.
 
-### Setup Interactive-Insights-Workbench (I2W) Environment
+#### Setup Interactive-Insights-Workbench (I2W) Environment
 Download [I2W](https://github.com/zos-spark/interactive-insights-workbench) and following the [Quickstart](https://github.com/zos-spark/interactive-insights-workbench#quickstart) instructions.
 
-
-### Setup MongoDB
+#### Setup MongoDB
 If you haven't already, Download [I2W](https://github.com/zos-spark/interactive-insights-workbench) and follow the [Sample Database](https://github.com/zos-spark/interactive-insights-workbench#sample-database) instructions.
 
-
-### Setup Scala-Workbench Environment
+#### Setup Scala-Workbench Environment
 Download the [Scala-Workbench](https://github.com/zos-spark/scala-workbench) and follow the setup instructions.  In the [Setup Environment Variables](https://github.com/zos-spark/scala-workbench#setup-environment-variables-optional) section, there is an example ```template/docker-compose.yml.template``` file.  In this file, make sure to fill in the following fields:
 
 * JDBC_USER - User able to query VSAM and DB2
