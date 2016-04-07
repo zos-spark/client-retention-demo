@@ -1,4 +1,4 @@
-#Client Retention Demo
+# Client Retention Demo
 
 ## Purpose
 This project serves as an end-to-end demonstration and integration verification test (IVT) for the Spark on z/OS [reference architecture](https://ibm.box.com/shared/static/xm05xl372hkbmmj4eu9fhoq0kplytzp3.png).
@@ -14,7 +14,7 @@ The bank would use the Scala Workbench to distill these data sources into a desi
 
 To perform an IVT of a Spark on z/OS deployment one would do the following:
 
-1. Install and configure the [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) with APAR
+1. Install and configure the [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html). 
 2. Prime the z/OS data sources with sample demo data.
 3. Install the Scala Workbench
 4. Install the Interactive Insights Workbench (I2W) and MongoDB
@@ -30,19 +30,19 @@ To perform an IVT of a Spark on z/OS deployment one would do the following:
 * Notebooks
 	* Sample Scala Notebook that performs data munging on DB2 and VSAM data and writes results to MongoDB.
 	* Sample Python Notebooks that analyzes data in MongoDB.
-	* Sample Python Notebook that uses [Dato](https://dato.com) to provide a churn analysis on the data in MongoDB.
+	* Sample Python Notebook that uses [Dato](https://dato.com) to provide a churn analysis on the data in MongoDB. <font color="red">*Pending contribution from Dato*</font>.
 
 ## Dependencies
 The client retention demo requires the following:
 
 * Docker Toolbox
 * z/OS Host (z/System)
- * [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) with APAR
+ * [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) with <font color="blue">PTF UI36538</font>
  * VSAM
  * DB2
-* Interactive-Insights-Workbench (I2W) (Docker)
+* Interactive Insights Workbench (Docker)
 * MongoDB (Docker)
-* Scala-Workbench (Docker)
+* Scala Workbench (Docker)
 
 ## Demo Setup
 
@@ -74,11 +74,14 @@ Once the setup steps listed above have been completed, you can verify the setup 
 1. On the Scala-Workbench run the ```client_retention_demo.ipynb``` notebook.
 2. On I2W run the ```client_explore.ipynb``` and ```churn_business_value.ipynb``` notebooks.
 
-###client\_retention\_demo.ipynb
+#### client\_retention\_demo.ipynb
 The ```client_retention_demo.ipynb``` will use [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) to access data stored in a DB2 table and in a VSAM data set.  It will then calculate some aggregate statistics, then offload the results to MongoDB.
 
-###client\_explore.ipynb
+#### client\_explore.ipynb
 The ```client_explore.ipynb``` will read from MongoDB, and create several interactive exploritory widgets.
 
-###client\_retention\_demo.ipynb
+#### churn\_business\_value.ipynb
 The ```churn_business_value.ipynb``` will read from MongoDB, and create several interactive widgets that show business value of target groups.
+
+#### client\_churn\_analysis.ipynb
+The ```client_churn_analysis.ipynb``` will read from MongoDB, and apply machine learning techniques against the data using technology from [Dato](https://dato.com). <font color="red">*Pending contribution from Dato*</font>
