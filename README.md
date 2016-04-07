@@ -8,11 +8,11 @@ The project uses imitation financial data for a retail bank scenario. The retail
 * Client Profile Data (VSAM)
 * Client Transaction History (DB2)
 
-The bank would use the Scala Workbench to distill these data sources into a desired dateset for use by data explorers who would use the Interactive Insights Workbench to perform downstream analytics.
+The bank would use the Scala Workbench to distill these data sources into a desired data set for use by data explorers who would use the Interactive Insights Workbench to perform downstream analytics.
 
 ## Overview
 
-To perform an IVT of a Spark on z/OS deployment one would do teh following:
+To perform an IVT of a Spark on z/OS deployment one would do the following:
 
 1. Install and configure the [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) with APAR
 2. Prime the z/OS data sources with sample demo data.
