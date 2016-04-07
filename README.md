@@ -3,8 +3,6 @@
 ## Purpose
 This project serves as an end-to end demonstration and integration verification test (IVT) for Spark on z/OS [reference architecture](https://ibm.box.com/shared/static/xm05xl372hkbmmj4eu9fhoq0kplytzp3.png).
 
-The project 
-
 ## Contents
 
 * z System Data Package
@@ -56,7 +54,16 @@ If you are using a username/password with MongoDB, also fill in the following fi
 * MONGO_HOST - Host system of the MongoDB instance
 
 ## Verification Test
+Once the setup steps listed above have been completed, you can verify the setup using the following scripts:
 
-1. Run the Scala notebook
-2. Run one any of the Python notebooks
+1. On the Scala-Workbench run the ```client_retention_demo.ipynb``` notebook.
+2. On I2W run the ```client_explore.ipynb``` and ```churn_business_value.ipynb``` notebooks.
 
+###client\_retention\_demo.ipynb
+The ```client_retention_demo.ipynb``` will use [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) to access data stored in a DB2 table and in a VSAM data set.  It will then calculate some aggregate statistics, then offload the results to MongoDB.
+
+###client\_explore.ipynb
+The ```client_explore.ipynb``` will read from MongoDB, and create several interactive exploritory widgets.
+
+###client\_retention\_demo.ipynb
+The ```churn_business_value.ipynb``` will read from MongoDB, and create several interactive widgets that show business value of target groups.
