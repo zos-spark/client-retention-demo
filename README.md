@@ -40,7 +40,7 @@ The client retention demo requires the following:
  * [IBM z/OS Platform for Apache Spark](http://www-03.ibm.com/systems/z/os/zos/apache-spark.html) with APAR
  * VSAM
  * DB2
-* Interactive-Insights-Workbench (I2W) (Docker)
+ * [IBM JAVA 8 SR2-FP10 sdk for 64-bit System z](http://www.ibm.com/developerworks/java/jdk/linux/download.html)
 * MongoDB (Docker)
 * Scala-Workbench (Docker)
 
