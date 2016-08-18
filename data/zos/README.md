@@ -133,7 +133,7 @@ You must do one of the following:
 After RESTDEMO Restore job completes, you should have the following:
 
 * Install JCL:      ```<InstallHLQ>.CRDEMO.JCL```
-* COPBOL COPYBOOK:  ```<InstallHLQ>.CRDEMO.DCLGEN```
+* COBOL COPYBOOK:  ```<InstallHLQ>.CRDEMO.DCLGEN```
 * DB2 DDL/JCL:      ```<InstallHLQ>.CRDEMO.DB2.*```
 * DB2 UNLOADs:      ```<InstallHLQ>.CRDEMO.DB.*```
 * XLS WinZip:       ```<InstallHLQ>.CRDEMO.XLS.ZIPBIN```
